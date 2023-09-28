@@ -17,16 +17,23 @@
    - `firefox` (optional): Used to open a web browser for port 80.
    - `ssh` (optional): Used to open an SSH terminal for port 22.
 
-2. **Install Dirsearch (optional):**
+
+2.If you plan to use xterm, make sure it is installed. You can typically install it apt :
+   ```
+   sudo apt  install xterm
+   ```
+
+3. **Install Dirsearch (optional):**
    If you plan to use Dirsearch, make sure it is installed. You can typically install it apt :
    ```
    sudo apt  install dirsearch
    ```
 
-3. **Download the Script:**
+4. **Download the Script:**
    Download the script and save it to a directory on your system.
 
-4. **Make the Script Executable:**
+
+5. **Make the Script Executable:**
    Use the `chmod` command to make the script executable:
    ```
    chmod +x iprunner.sh
@@ -38,7 +45,7 @@
 
 2. Navigate to the directory where you saved the script using the `cd` command:
    ```
-   cd /path/to/directory
+   cd IPRUNNER
    ```
 
 3. Run the script using the `./` prefix:
