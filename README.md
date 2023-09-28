@@ -24,9 +24,9 @@ f you want to add xterm functionality to your script, you can follow these steps
    - `ssh` (optional): Used to open an SSH terminal for port 22.
 
 3. **Install Dirsearch (optional):**
-   If you plan to use Dirsearch, make sure it is installed. You can typically install it via pip:
+   If you plan to use Dirsearch, make sure it is installed. You can typically install it via apt:
    ```
-   pip install dirsearch
+   sudo apt install dirsearch
    ```
 
 4. **Download the Script:**
