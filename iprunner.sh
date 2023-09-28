@@ -20,7 +20,7 @@ check_ping() {
     fi
 }
 
-# Function to check if port is open on the IP address
+# Function to check if a port is open on the IP address
 check_port() {
     if nc -z -w1 "$1" "$2"; then
         return 0
@@ -34,6 +34,24 @@ generate_random_color() {
     colors=("31" "32" "33" "34" "35" "36" "91" "92" "93" "94" "95" "96")
     echo -e "\e[${colors[$((RANDOM % ${#colors[@]}))]}m"
 }
+
+# Create a temporary file to store the IP address
+tempfile=$(mktemp)
+
+# Create a GTK dialog to input the target IP address
+zenity --entry --title "Enter Target IP" --text "Please enter the target IP address:" > "$tempfile"
+
+# Check if the user canceled the dialog
+if [ $? -ne 0 ]; then
+    echo "User canceled. Exiting..."
+    exit 1
+fi
+
+# Read the IP address from the temporary file
+ip=$(cat "$tempfile")
+
+# Remove the temporary file
+rm "$tempfile"
 
 # Clear the terminal
 clear
@@ -53,10 +71,6 @@ echo -e "  Network Toolkit Script"
 echo -e "  by StRaNgEdReAmEr"
 echo -e "  Version 1.0"
 echo -e "-------------------------------------------------------------"
-
-# Prompt the user to enter an IP address
-echo -e "Enter the Target IP: "
-read ip
 
 # Create a log file and store the IP address
 echo "[$(date +"%Y-%m-%d %T")] Scanning IP address: $ip" > network_tool.log
@@ -95,4 +109,3 @@ echo -e "for the output of dirsearch go to (/home/@username/.dirsearch/reports)"
 echo -e "\e[0m"  # Reset color to default
 sleep 5
 exit 0
-
