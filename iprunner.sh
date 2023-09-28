@@ -3,6 +3,7 @@
 rm -f network_tool.log
 sudo apt install xterm -y
 sudo apt install dirsearch -y
+./update.sh
 # Function to log commands and their outputs with timestamps
 log_command() {
     timestamp=$(date +"%Y-%m-%d %T")
