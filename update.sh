@@ -14,9 +14,9 @@ echo "hellcat has been updated."
 
 
 # Define the repository URL
-REPO_URL="https://github.com/strangedreamer4/hellcat.git"
+REPO_URL="https://github.com/strangedreamer4/IPRUNNER.git"
 # Define the repository directory
-REPO_DIR="hellcat"
+REPO_DIR="IPRUNNER"
 
 # Navigate to the parent directory
 cd ..
