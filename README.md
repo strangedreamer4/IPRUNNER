@@ -71,3 +71,14 @@ f you want to add xterm functionality to your script, you can follow these steps
 
 Please note that for some functionalities, such as opening a web browser or an SSH terminal, you may need to have the respective applications (e.g., Firefox, SSH client) installed and configured on your system. Also, ensure that you have the necessary permissions to run these tools and open xterm windows.
 
+8. **updating... (update tool):**
+   You can use update.sh. For example, on Ubuntu or Debian-based systems, you can use:
+
+   ```bash
+   ./update.sh
+   ```
+
+
+
+
+
